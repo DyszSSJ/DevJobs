@@ -1,129 +1,149 @@
-.container {
-  padding: 0 2rem;
+
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+.body {
+  position: absolute;
+  top: -.5px;
+  left: -.5px;
+  right: -.3px;
+  bottom: -.3px;
+  background-image:
+  linear-gradient(
+      to right,
+      rgb(0 0 0 / 0.8),
+      rgb(0 0 0 / 0.7)
+    ), url(../assets/city-skyline-wallpapers-008.jpg);
+  -webkit-filter: blur(5px);
+  background-size: cover;
+  z-index: 0;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.grad {
+  width: auto;
+  height: 100%; 
+  z-index: 1;
+  opacity: 0.7;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.header {
+  position: absolute;
+  top: calc(50% - 35px);
+  left: calc(50% - 280px);
+  z-index: 2;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.header div {
+  float: left;
+  color: #fff;
+  font-family: "Exo", sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.header div span {
+  color: #5379fa !important;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.login {
+  position: absolute;
+  top: calc(35% - 85px);
+  left: calc(55% - 50px);
+  width: 400px;
+  padding: 3rem;
+  opacity: 0.6;
+  z-index: 2;
+  background-color: #fff;
+  border-radius: 2rem;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.login input[type="text"] {
+  width: 33rem;
+  height: 5rem;
+  background: transparent;
+  border: 2px solid rgba(41, 41, 41, 0.6);
+  border-radius: 1rem;
+  color: black;
+  font-family: "Exo", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 20px;
+  opacity: 0.7;
+  padding: 4px;
 }
 
-.title,
-.description {
+.login input[type="password"] {
+  width: 33rem;
+  height: 5rem;
+  background: transparent;
+  border: 2px solid rgba(32, 32, 32, 0.6);
+  border-radius: 1rem;
+  color: #070707;
+  font-family: "Exo", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 4px;
+  opacity: 0.7;
+  margin-top: 20px;
+}
+
+.login input[type="button"] {
+  width: 33rem;
+  height: 5rem;
+  background: #5379fa;
+  border: 2px solid #fff;
+  cursor: pointer;
+  border-radius: 1rem;
+  color: #070707;
+  font-family: "Exo", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 6px;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.login input[type="button"]:hover {
+  opacity: 0.6;
+}
+
+.login input[type="button"]:active {
+  opacity: 0.6;
+}
+
+.login input[type="text"]:focus {
+  outline: none;
+  border: 1px solid rgba(32, 32, 32, 0.6);
+}
+
+.login input[type="password"]:focus {
+  outline: none;
+  border: 1px solid rgba(32, 32, 32, 0.6);
+}
+
+.login input[type="button"]:focus {
+  outline: none;
+}
+
+.contentParrafo {
+  color: #070707;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.registerCount {
   text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
   font-size: 1.5rem;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
+.registerCount a {
+  color: rgba(23, 62, 134, 0.897);
+  font-family: "Exo", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 400;
   text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
+.registerCount a:hover {
+  text-decoration: underline;
 }

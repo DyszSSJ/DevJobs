@@ -2,6 +2,8 @@ import { useState } from "react";
 import styles from "../styles/Home.module.css";
 import Layout from "../components/Layout";
 import Link from "next/link";
+import Image from "next/image";
+import Google from "../assets/google-g-2015.svg"
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -39,6 +41,10 @@ export default function Home() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <br />
+          <button className={styles.btnGoogle}>
+                <Image src={Google} alt="Google" width={30} height={23} />
+                Inicia Sesión con Google
+            </button>
           <input type="button" value="Inicia Sesión" />
           <div className={styles.registerCount}>
             <p className={styles.contentParrafo}>¿No tienes una cuenta?</p>
